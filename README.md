@@ -4,6 +4,10 @@ While Pixiv is great, it doesn't have the social share factor as Twitter does. I
 
 This Chrome extensions allows you to quickly find if an artist has also posted their artwork on Twitter, and opens those tweets in a new tab. You can then easily like or retweet them!
 
+#### Limitations
+
+As this extension uses on SauceNAO's search, and SauceNAO is in turn dependant on users uploading and tagging sources on Booru sites, it is likely it will not find a source on new artwork that has not been posted on Booru with the source being Twitter. This is just an easy shortcut that might save time in most cases.
+
 ## Setup
 
 This extension uses SauceNAO to discover if there's an existing tweet with the first image of a pixiv post. Due to limitations on SaucenNAO's free API (6 per 30s and 200 every 24h), I cannot reuse my key in case more people use this extension, and so you must set up your own SauceNAO key.
