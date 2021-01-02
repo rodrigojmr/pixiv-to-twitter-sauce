@@ -19,8 +19,10 @@ export const logoHTML = `<img src=${chrome.extension.getURL(
 export const makeButton = () => {
   if (!document.querySelector('#twitter-share')) {
     const section = document.querySelector('main section section');
-    const likeButton = document.querySelector('.gtm-main-bookmark').parentNode
-      .nextSibling;
+    const heartButton =
+      document.querySelector('.gtm-main-bookmark') ||
+      document.querySelector("a[href^='/bookmark']");
+    const likeButton = heartButton.parentNode.nextSibling;
 
     let div = document.createElement('div');
     div.className = 'sc-181ts2x-3 iujCSd';
