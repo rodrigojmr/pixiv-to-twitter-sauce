@@ -22,3 +22,9 @@ Once installed, a simple options page will appear with the link to [create a Sau
 - Enable "Developer mode" at the top-right.
 - Click the "Load unpacked" button that just appeared.
 - Select the folder where you just extracted the zip.
+
+## Planned
+
+- Submit to Chrome Web Store
+- If several tweets are found, show a preview of all tweets so you can choose which one you wanna open.
+- This was created in a day so there's some possible housekeeping and testing to be done.
