@@ -1,0 +1,38 @@
+{
+
+  "manifest_version": 2,
+  "name": "Pixiv to Twitter Sauce",
+  "version": "1",
+  "description": "Look for an artist's work on twitter.",
+  "icons": {
+    "16": "src/assets/pixiv-twitter-icon.png",
+    "48": "src/assets/pixiv-twitter-icon.png",
+    "128": "src/assets/pixiv-twitter-icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.pixiv.net/*"
+      ],
+      "js": [
+        "src/js/content_script.js"
+      ],
+      "css": [
+        "src/styles/styles.css"
+      ]
+    }
+  ],
+  "background": {
+    "page": "src/html/background.html"
+  },
+  "options_page": "src/html/options.html",
+  "permissions": [
+    "tabs",
+    "storage",
+    "https://saucenao.com/*"
+  ],
+  "web_accessible_resources": [
+    "src/js/*",
+    "src/assets/*"
+  ]
+}

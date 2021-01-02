@@ -1,0 +1,18 @@
+#twitter-share {
+  background-color: #1c9cea;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  outline: none;
+  border: none;
+}
+
+#twitter-share > * {
+  pointer-events: none;
+}
