@@ -29,7 +29,8 @@
   "permissions": [
     "tabs",
     "storage",
-    "https://saucenao.com/*"
+    "https://saucenao.com/*",
+    "https://pixiv.net/*"
   ],
   "web_accessible_resources": [
     "src/js/*",
