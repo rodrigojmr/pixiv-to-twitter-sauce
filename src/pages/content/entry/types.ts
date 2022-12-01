@@ -33,7 +33,7 @@ export interface SauceNAOResult {
 }
 
 export interface Data {
-  ext_urls: string[];
+  ext_urls?: string[];
   title?: string;
   pixiv_id?: number;
   member_name?: string;

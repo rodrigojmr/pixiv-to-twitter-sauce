@@ -75,7 +75,7 @@ const parseForTwitterURLs = (results: SauceNAOResult[]) => {
     .filter((result) => {
       const hasTwitterUrl =
         result.data.source?.includes("twitter") ||
-        result.data.ext_urls.some((url) => url.includes("twitter"));
+        result.data.ext_urls?.some((url) => url.includes("twitter"));
       return Number(result.header.similarity) > 80 && hasTwitterUrl;
     })
     .map((result) => {
@@ -83,7 +83,7 @@ const parseForTwitterURLs = (results: SauceNAOResult[]) => {
         ...result.data,
         source: result.data.source?.includes("twitter")
           ? result.data.source
-          : result.data.ext_urls.find((url) => url.includes("twitter")),
+          : result.data.ext_urls?.find((url) => url.includes("twitter")),
         thumbnail: result.header.thumbnail,
       };
     });
