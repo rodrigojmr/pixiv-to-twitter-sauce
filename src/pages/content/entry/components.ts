@@ -7,28 +7,25 @@ export const makeButton = () => {
   if (!document.querySelector("#twitter-share")) {
     const section = document.querySelector("main section section");
     const buttons = section.querySelectorAll("[type=button]");
-    const lasButtonContainer = buttons[buttons.length - 1].parentNode;
+    const lasButtonContainer = buttons[buttons.length - 1].parentElement;
 
-    const div = document.createElement("div");
-    div.className = "sc-181ts2x-3 iujCSd";
-    div.setAttribute("id", "twitter-share-wrapper");
-    div.setAttribute(
-      "style",
-      "display: flex; padding-left: 10px; padding-right: 10px;"
-    );
+    const wrapper = document.createElement("div");
+    wrapper.className = lasButtonContainer.className;
+    wrapper.setAttribute("id", "twitter-share-wrapper");
+    wrapper.setAttribute("style", "display: flex;");
 
     const button = document.createElement("button");
     button.setAttribute("id", "twitter-share");
     button.addEventListener("click", fetchSauces);
     button.innerHTML = logoHTML;
 
-    div.appendChild(button);
-    insertBefore(lasButtonContainer, div);
+    wrapper.appendChild(button);
+    insertBefore(lasButtonContainer, wrapper);
   }
 };
 
 const insertBefore = (referenceNode, newNode) => {
-  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+  referenceNode.parentElement.insertBefore(newNode, referenceNode.nextSibling);
 };
 
 export const resetButton = () => {
