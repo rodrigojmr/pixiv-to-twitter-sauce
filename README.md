@@ -33,8 +33,6 @@ Once installed, a simple options page will appear with the link to [create a Sau
 - If several tweets are found, show a preview of all tweets so you can choose which one you wanna open.
 - This was created in a day so there's some possible housekeeping and testing to be done.
 
-This extension was bootstraped from [Chrome Extension Boilerplate with React + Vite + TypeScript](https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite)
-
 ## Dev Installation <a name="devinstallation"></a>
 
 ### Procedures <a name="procedures"></a>
@@ -48,3 +46,5 @@ This extension was bootstraped from [Chrome Extension Boilerplate with React + V
    4. Find - Load unpacked extension
    5. Select - `dist` folder in this project (after dev or build)
 6. If you want to build in production, Just run `yarn build` or `npm run build`.
+
+This extension was bootstraped from [Chrome Extension Boilerplate with React + Vite + TypeScript](https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite)
