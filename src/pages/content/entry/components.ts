@@ -6,8 +6,8 @@ export const logoHTML = `<img src=${logo} alt="Pixiv to Twitter" style="width:20
 export const makeButton = () => {
   if (!document.querySelector("#twitter-share")) {
     const section = document.querySelector("main section section");
-    const heartButton = section.querySelector(".gtm-main-bookmark");
-    const likeButton = heartButton.parentNode.nextSibling;
+    const buttons = section.querySelectorAll("[type=button]");
+    const lasButtonContainer = buttons[buttons.length - 1].parentNode;
 
     const div = document.createElement("div");
     div.className = "sc-181ts2x-3 iujCSd";
@@ -23,11 +23,11 @@ export const makeButton = () => {
     button.innerHTML = logoHTML;
 
     div.appendChild(button);
-    insertAfter(likeButton, div);
+    insertBefore(lasButtonContainer, div);
   }
 };
 
-const insertAfter = (referenceNode, newNode) => {
+const insertBefore = (referenceNode, newNode) => {
   referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 };
 
