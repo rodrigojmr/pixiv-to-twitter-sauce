@@ -57,6 +57,7 @@ export const fetchSauces = async function (e: MouseEvent) {
     }
   } catch (error) {
     resetButton();
+    console.log("Error fetching tweets", error);
     if (error instanceof Error) {
       const invalidAPIError = ["api-not-found", "invalid-api"].some((message) =>
         error.message.includes(message)

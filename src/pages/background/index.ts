@@ -9,7 +9,6 @@ chrome.runtime.onInstalled.addListener(function (details) {
 });
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  console.log("rjm ~ chrome.tabs.onUpdated.addListener ~ tab", tab);
   if (tab.url.includes("artworks") && tab.status === "complete") {
     chrome.tabs.sendMessage(tabId, "pixiv artwork page");
   }

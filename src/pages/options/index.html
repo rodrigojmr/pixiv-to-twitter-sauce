@@ -28,14 +28,12 @@
     <script type="module">
       function showCurrentAPI() {
         chrome.storage.sync.get("saucenaoAPI", function (items) {
-          console.log("rjm ~ restore_options ~ items", items);
-          document.getElementById("api-input").value = items.saucenaoAPI;
+          document.getElementById("api-input").value = items.saucenaoAPI || "";
         });
       }
 
       function save(e) {
         e.preventDefault();
-        console.log(document.getElementById("api-input").value);
         chrome.storage.sync.set(
           {
             saucenaoAPI: document.getElementById("api-input").value,
