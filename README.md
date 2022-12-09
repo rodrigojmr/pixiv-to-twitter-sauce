@@ -18,7 +18,7 @@ Once installed, a simple options page will appear with the link to [create a Sau
 
 ![](https://j.gifs.com/BNwqvN.gif)
 
-## Instalation
+## Installation
 
 - Download Pixiv2Twitter.zip from the releases page.
 - Extract this zip file in a convenient folder.
